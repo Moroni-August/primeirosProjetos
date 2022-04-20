@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.GLossário</title>
+    <style>
+        dt {
+            font-weight: bold;
+            font-size: medium;
+        }
+
+        body {
+            color: aliceblue;
+            background-color: rgb(34, 34, 34);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        code {
+            background-color: rgb(58, 58, 58);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>GLossário</h1>
+    <dl>
+        <dt style="color: rgb(250, 217, 177);">Link</dt>
+        <dd>Especifica as relações entre o documento atual e um recurso externo.</dd>
+    </br>
+        <dt style="color: rgb(250, 250, 220);">Background</dt>
+        <dd>É um atalho para definir os valores de fundo individuais em um único lugar na folha de estilo.</dd>
+    </br>
+        <dt style="color: rgb(250, 242, 250);">Meta</dt>
+        <dd>Define qualquer informação de metadados que não podem ser definidos por outros elementos HTML.</dd>
+    </br>
+        <dt style="color: rgb(250, 215, 250);">Nav</dt>
+        <dd>Representa uma seção de uma página que aponta para outras páginas ou para outras áreas da página, ou seja, uma seção com links de navegação.</dd>
+    </dl>
+
+    <h2>Códigos</h2>
+    <code>link</code> 
+    <code>background</code> 
+    <code>meta</code> 
+    <code>nav</code>
+</body>
+</html>
