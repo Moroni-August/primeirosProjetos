@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        body{
+            width: auto;
+            height: auto;  
+            background-color: rgb(186, 248, 248);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            background-color: rgba(131, 224, 224, 0.589);
+            box-shadow: 5px 5px 5px rgb(190, 243, 243);
+            box-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            width: 75%;
+        }
+
+        article, aside {
+            margin: 10px;
+            text-align: justify;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        menu {
+            display: block;
+            box-shadow: 1px 1px 5px rgb(38, 96, 172);
+            background-color: rgb(53, 132, 236);
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+        h1 {
+            display: block;
+            box-shadow: 1px 1px 5px rgb(93, 158, 158);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            background-color: rgb(88, 231, 231);
+            margin: 0;
+            padding: 50px;
+        }
+
+        #h, #c, #s {
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-right: 80px;
+            color: black;
+        }
+
+        #h:hover, #c:hover, #s:hover {
+            background-color: rgb(0, 91, 209);
+            box-shadow: 1px 1px 5px rgb(0, 91, 209);
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        #container {
+            display: flex;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            top: 1100px;
+            right: 80px;
+            background-color: rgb(186, 248, 248);
+        }
+
+        #back {
+            background-color: rgb(186, 248, 248);
+        }
+        #back:hover {
+            width: 80px;
+            height: 80px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="pai">
+        <h1 id="bk">Meu blog</h1>
+        <menu>
+            <a href="#1" id="h">Home</a>
+            <a href="#2" id="s">Sobre</a>
+            <a href="#3" id="c">Contato</a>
+        </menu>
+
+        <article>
+            <h2>Título do Post</h2>
+            <img src="https://source.unsplash.com/random" width="400px" height="200px" alt="Imagem aleatória"><br/>
+            <blockquote>"Sua única limitação é você mesmo!"</blockquote>
+
+            <p id="1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad maxime error atque facere accusamus animi laborum rerum modi beatae possimus quasi, quisquam velit expedita voluptatibus facilis veniam explicabo labore eligendi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis cum accusamus id ab exercitationem ad molestiae, et tempore totam, perferendis, nihil molestias dolorum sed? Quae odio voluptates ratione odit vero! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum deleniti quam eligendi, hic commodi voluptas odio inventore vel vero tenetur enim dolores magnam explicabo error laboriosam quidem pariatur, similique ducimus?</p>
+
+            <p id="2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ipsam quas enim odio consequuntur iusto! Voluptatem unde sit enim sed voluptates nobis illum quibusdam, quod facilis excepturi voluptatum beatae? Molestiae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur perspiciatis dolorum, non nesciunt molestias blanditiis tempora autem officia quam sed quo dolor exercitationem sit quidem temporibus sunt labore mollitia rem! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae tempora eos error illum quasi incidunt delectus ducimus vero ullam quos, animi rem sit minima, possimus in aliquid itaque, dignissimos explicabo.<p>
+
+            <p id="3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum fugiat repudiandae incidunt voluptatem, ea quasi similique voluptas nesciunt minima numquam saepe in exercitationem facilis quia ipsum, laboriosam, non impedit accusantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda aut saepe ratione eum nesciunt, atque soluta quae ipsa! Eius maxime harum blanditiis laboriosam distinctio exercitationem, id culpa alias assumenda quisquam! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi, magni! Voluptate excepturi adipisci quam? Placeat adipisci dignissimos nostrum, architecto consequatur impedit totam quos iste praesentium, blanditiis consequuntur sunt, nam aliquid?</p>
+        </article>
+
+        <hr>
+
+        <aside>
+            <strong>Data:</strong>20 abril de 2022<br>
+            
+            <img src="https://th.bing.com/th/id/OIP.PgaINlr-iVs5hc0wYrN5KgHaKe?pid=ImgDet&w=620&h=877&rs=1" width="200px" height="300px">
+            
+            <strong>Por:</strong>Nick Jane<br>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque, laboriosam, iste molestias, deleniti dicta ullam repellendus nulla debitis corporis totam quasi asperiores atque officiis perferendis dolorem. Ullam dolorum saepe recusandae.</p>
+        </aside>
+    </div>
+    <div id="container">
+        <a href="#bk"><img id="back" src="icon/up.png"></img></a>
+    </div>
+</body>
+</html>

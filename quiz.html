@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <style>
+        div#pai {
+            background-color: rgb(253, 200, 156);
+            box-shadow: 5px 5px 30px rgb(255, 193, 142);
+            box-align: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        body {
+            display: flex;
+            background-color: rgb(245, 234, 225);
+        }
+        label, h2, h3 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input {
+            background-color: rgba(245, 228, 212, 0.781);
+            margin-top: 5px;
+        }
+
+        #b {
+            padding: 5px;
+        }
+
+        #b:hover {
+            background-color: rgb(253, 200, 156);
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="pai">
+        <form method="get" action="" id="fquiz" name="qui">
+            <fieldset id="squiz" name="qui">
+                <legend><h2>Teste seu conhecimento!</h2></legend>
+                <ol>
+                    <li>
+                        <h3>Quem descobriu o Brasil?</h3>
+                        <div>
+                            <label for="vf"><input id="vf" name="pq" type="radio" value="f">Cristóvão Colombo</label><br/>
+                            <label for="vv"><input id="vv" name="pq" type="radio" value="v">Pedro Álvares Cabral</label>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Quantas regiões existem no Brasil?</h3>
+                        <div>
+                            <label for="vf"><input id="vf" name="pq2" type="radio" value="f">6 regiões</label><br/>
+                            <label for="vv"><input id="vv" name="pq2" type="radio" value="v">5 regiões</label>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Em que região São Paulo situa-se?</h3>
+                        <div>
+                            <label for="vf"><input id="vf" name="pq3" type="radio" value="v">Sudeste</label><br/>
+                            <label for="vv"><input id="vv" name="pq3" type="radio" value="f">Sul</label>
+                        </div>
+                    </li>
+                    <li>
+                        <h3>Quantas sílabas tem a palavra "bruxaria"?</h3>
+                        <div>
+                            <label for="vf"><input id="vf" name="pq4" type="radio" value="v">4 sílabas</label><br/>
+                            <label for="vv"><input id="vv" name="pq4" type="radio" value="f">3 sílabas</label>
+                        </div>
+                    </li>
+                </ol>
+                <label><input type="submit" id="b"></label>
+            </fieldset>
+        </form>    
+    </div>
+</body>
+</html>
