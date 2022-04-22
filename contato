@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        div {
+            background-color: rgb(253, 200, 156);
+            box-shadow: 5px 5px 30px rgb(255, 193, 142);
+            box-align: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        body {
+            display: flex;
+            background-color: rgb(245, 234, 225);
+        }
+        label {
+            margin-bottom: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        input, textarea {
+            background-color: rgba(245, 228, 212, 0.781);
+            margin-top: 5px;
+        }
+        option {
+            background-color: rgba(245, 228, 212, 0.781);
+        }
+
+        #b {
+            padding: 5px;
+        }
+
+        #b:hover {
+            background-color: rgb(253, 200, 156);
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="" method="get" id="fm" name="fm">
+            <fieldset>
+                <legend><span style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Entre em Contato</span></legend>
+                    <label for="sun">Assunto:
+                        <select>
+                            <option value="Suporte">Suporte</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="reclamacao">Reclamação</option>
+                        </select>
+                    </label><br/>
+                    
+                    <br/><label for="nc">Nome Completo:<br/><input type="text" id="nc" name="nc" placeholder="Ex.:José Bezerra" tabindex="2" value="" required autocapitalize="off"></label><br/>
+
+                    <br/><label for="mail">Email:<br/><input type="E-mail" :valid id="mail" name="mail" placeholder="email@seudominio.com" tabindex="3" value="" required autocomplete="off"></label><br/>
+
+                    <br/><label for="msg">Mensagem:<br/><textarea id="msg" name="msg" tabindex="4" rows="10" cols="30" required></textarea></label><br/>
+                    
+                    <br/><label for="c"><input type="checkbox" id="c" name="c" value="novidades"> Aceito receber novidades por e-mail.</label><br/>
+                    
+                    <br/><label for="b"><input type="submit" id="b" name="b"></label><br/>
+            </fieldset>
+        </form>
+    </div>
+    
+</body>
+</html>
