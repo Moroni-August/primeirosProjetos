@@ -21,7 +21,7 @@ themeButtons.forEach(color => {
 
 });
 
-// ta feito mas fazer oq
+// ta feio mas fazer oq
 
 let btn1 = document.querySelector('#btn1');
 let btn2 = document.querySelector('#btn2');
