@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang=pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b5f7f77abe.js" crossorigin="anonymous"></script>
+    <title>Morôni</title>
+</head>
+
+<body>
+    <!-- ======================PARTE DO SIDEBAR======================= -->
+    <div id="sidebar">
+        <div class="chooseBorder">
+            <h1 id="title"><span id="fontTitle">M</span>Sol</h1>
+        </div>
+        <nav class="sidebar">
+            <ul class="sidebar">
+                <li class="sidebar">
+                    <button class="btn" id="btn1" style="color: var(--switcher);"><i class="fa-solid fa-house-chimney"></i>home</button>
+                </li>
+                <li>
+                    <button class="btn" id="btn2"><i class="fa-solid fa-user"></i>About </button>
+                </li>
+                <li>
+                    <button class="btn" id="btn3"><i class="fa-solid fa-list"></i>Services</button>
+                </li>
+                <li>
+                    <button class="btn" id="btn4"><i class="fa-solid fa-briefcase"></i>Portfolio</button>
+                </li>
+                <li>
+                    <button class="btn" id="btn5"><i class="fa-solid fa-comments"></i> Contact</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- ======================== PARTE DAS CONFIGURAÇÕES, PERSONALIZAÇÃO ETC... ============================= -->
+    <!-- ============ THEME COLORS ============= -->
+    <aside class="config">
+        <div class="colorSwitcher">
+            <div class="switcherBtn">
+                <i class="fas fa-cog"></i>
+            </div>
+
+            <h3>Theme Color</h3>
+
+            <div class="themeButtonsContainer">
+                <span class="themeButtons" data-color="#ff4235" style="background-color: #ff4235;"></span>
+                <span class="themeButtons" data-color="#ff6f05" style="background-color: #ff6f05;"></span>
+                <span class="themeButtons" data-color="#249583" style="background-color: #249583;"></span>
+                <span class="themeButtons" data-color="#0b52c0" style="background-color: #0b52c0;"></span>
+                <span class="themeButtons" data-color="#ff56ba" style="background-color: #ff56ba;"></span>
+            </div>
+
+            <input type="checkbox" class="checkbox" id="chk" />
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </label>
+        </div>
+    </aside>
+    <!-- ================================= MENU PRINCIPAL ==================================== -->
+    <section class="home">
+        <div class="content">
+            <main class="content">
+                <h1>Hello, my name is <span id="name" class="switcher">Morôni Sol</span></h1>
+
+                <div class="textDinamic">
+                    <div class="container">
+                        <div class="estatico">
+                            <h2>I'm a</h2>
+                        </div>
+                        <ul class="dinamico">
+                            <li><span class="span">
+                                    <h2>Web Developer</h2>
+                                </span>
+                            </li>
+                            <li><span class="span">
+                                    <h2>Freelancer</h2>
+                                </span>
+                            </li>
+                            <li><span class="span">
+                                    <h2>Editor</h2>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <p>I'm a Web Developer with a little over 5 years experience . I usually create<br /> website, so I deal
+                    with
+                    website design, graphic design and other stuff.</p>
+                <br />
+                <button class="switcher" id="moreMe"><a href="" target="_blank" rel="noopener noreferrer">More about
+                        me</a></button>
+            </main>
+            <aside class="picture">
+                <img src="/image/photo.png" width="250" height="300">
+            </aside>
+        </div>
+    </section>
+    <!-- ================================= ABOUT ==================================== -->
+    <section class="none about">
+        <div class="menuContent">
+
+            <div class="menuInfoContent">
+                <div class="menuTop">
+                    <h1><span class="Amt">A</span><span class="Bmt">b</span>out Me</h1>
+                    <h3>I'm Morôni Sol and <span class="switcher">Web Developer</span></h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, ducimus, fugit ad voluptates
+                        eius
+                        quas assumenda, architecto ipsum ex neque est quisquam. Deserunt aliquid at temporibus dolorum
+                        nobis
+                        enim? Quia. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque tempore, beatae
+                        eligendi quaerat illum eius laborum fuga, neque, libero inventore sunt? Quis, temporibus tempore
+                        dolores quos veniam ut debitis impedit!
+                    </p>
+                </div>
+                <br />
+                <div class="menuInfo">
+                    <div class="menuInfoLeft">
+                        <p><span class="infoColor">Birthday:</span> 12 june 2003</p>
+                        <p><span class="infoColor">Website:</span> www.domain.com</p>
+                        <p><span class="infoColor">Degree:</span> none</p>
+                        <p><span class="infoColor">City:</span> São Vicente</p>
+                    </div>
+                    <div class="menuInfoRight">
+                        <p><span class="infoColor">Age:</span> 19</p>
+                        <p><span class="infoColor">Email:</span> moronisol@gmail.com</p>
+                        <p><span class="infoColor">Phone:</span> +13 996207022</p>
+                        <p><span class="infoColor">Freelancer:</span> Availabel</p>
+                    </div>
+                </div>
+                <button class="switcher"><a href="#" target="_blank" rel="noopener noreferrer">Download CV</a></button>
+                <button class="switcher"><a href="#" target="_blank" rel="noopener noreferrer">Hire Me</a></button>
+            </div>
+
+            <div class="menuAppropriation">
+                <div class="menuRange">
+                    <label for="l1" class="menuLabel">
+                        <title class="titleLabel">CSS</title> 70%
+                    </label>
+                    <span class="rangeOut" style="background-color: var(--background-color-menu);">
+                        <span class="range" style="background-color: var(--switcher); width: 70%;"></span></span>
+                    <label for="l2" class="menuLabel" id="l1">
+                        <title class="titleLabel">HTML5</title> 80%
+                    </label>
+                    <span class="rangeOut" style="background-color: var(--background-color-menu);"><span class="range"
+                            id="l2" style="background-color: var(--switcher); width: 80%;"></span></span>
+                    <label for="l3" class="menuLabel">
+                        <title class="titleLabel">PHP</title> 50%
+                    </label>
+                    <span class="rangeOut" style="background-color: var(--background-color-menu);"><span class="range"
+                            id="l3" style="background-color: var(--switcher); width: 50%;"></span></span>
+                    <label for="l4" class="menuLabel">
+                        <title class="titleLabel">JavaScript</title> 30%
+                    </label>
+                    <span class="rangeOut" style="background-color: var(--background-color-menu);"><span class="range"
+                            id="l4" style="background-color: var(--switcher); width: 30%;"></span></span>
+                </div>
+            </div>
+
+            <div class="below">
+                <div class="barEducation">
+                    <div class="tittle">
+                        <h3>Education</h3>
+                    </div>
+
+                    <div class="inline">
+                        <div class="barContent">
+                            <span class="lball"></span><i class="fa-solid fa-calendar"></i>&nbsp <span class="data">2013
+                                - 2015</span>
+                            <h4>Master in Computer Science</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis similique quam sit
+                                numquam laborum, ratione dignissimos voluptatum saepe, velit facilis magni obcaecati
+                                fugit
+                                aliquid nemo. Omnis nostrum repellat laborum debitis!</p>
+                            <br />
+                            <span class="lball2"></span><i class="fa-solid fa-calendar"></i>&nbsp <span
+                                class="data">2013 - 2015</span>
+                            <h4>Master in Computer Science</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis similique quam sit
+                                numquam laborum, ratione dignissimos voluptatum saepe, velit facilis magni obcaecati
+                                fugit
+                                aliquid nemo. Omnis nostrum repellat laborum debitis!</p>
+                            <br />
+                            <span class="lball3"></span><i class="fa-solid fa-calendar"></i>&nbsp <span
+                                class="data">2013 - 2015</span>
+                            <h4>Master in Computer Science</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis similique quam sit
+                                numquam laborum, ratione dignissimos voluptatum saepe, velit facilis magni obcaecati
+                                fugit
+                                aliquid nemo. Omnis nostrum repellat laborum debitis!</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="barExperience">
+                    <div class="tittle">
+                        <h3>Experience</h3>
+                    </div>
+
+                    <div class="inline">
+                        <div class="barContent">
+                            <span class="rball"></span><i class="fa-solid fa-calendar"></i>&nbsp <span class="data">2013
+                                - 2015</span>
+                            <h4>Master in Computer Science</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis similique quam sit
+                                numquam laborum, ratione dignissimos voluptatum saepe, velit facilis magni obcaecati
+                                fugit
+                                aliquid nemo. Omnis nostrum repellat laborum debitis!</p>
+                            <br />
+                            <span class="rball2"></span><i class="fa-solid fa-calendar"></i>&nbsp <span
+                                class="data">2013 - 2015</span>
+                            <h4>Master in Computer Science</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis similique quam sit
+                                numquam laborum, ratione dignissimos voluptatum saepe, velit facilis magni obcaecati
+                                fugit
+                                aliquid nemo. Omnis nostrum repellat laborum debitis!</p>
+                            <br />
+                            <span class="rball3"></span><i class="fa-solid fa-calendar"></i>&nbsp <span
+                                class="data">2013 - 2015</span>
+                            <h4>Master in Computer Science</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis similique quam sit
+                                numquam laborum, ratione dignissimos voluptatum saepe, velit facilis magni obcaecati
+                                fugit
+                                aliquid nemo. Omnis nostrum repellat laborum debitis!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================================= Services ==================================== -->
+    <section class="none services">
+
+        <div class="menuContetServices">
+            <div class="servicesTitle">
+                <h1><span class="Sborder">S</span><span class="Eborder">e</span>rvices</h1>
+            </div>
+            <div class="menuServices">
+                <div class="sbox service1">
+                    <div class="iconS iconS1">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p class="pServices">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, saepe hic!
+                        Quisquam delectus, nulla dolorem sint, soluta dolore.</p>
+
+                </div>
+                <div class="sbox service2">
+                    <div class="iconS iconS2">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p class="pServices">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, saepe hic!
+                        Quisquam delectus, nulla dolorem sint, soluta dolore.</p>
+                </div>
+                <div class="sbox service3">
+                    <div class="iconS iconS3">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p class="pServices">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, saepe hic!
+                        Quisquam delectus, nulla dolorem sint, soluta dolore.</p>
+                </div>
+                <div class="sbox service4">
+                    <div class="iconS iconS4">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p class="pServices">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, saepe hic!
+                        Quisquam delectus, nulla dolorem sint, soluta dolore.</p>
+                </div>
+                <div class="sbox service5">
+                    <div class="iconS iconS5">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p class="pServices">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, saepe hic!
+                        Quisquam delectus, nulla dolorem sint, soluta dolore.</p>
+                </div>
+                <div class="sbox service6">
+                    <div class="iconS iconS6">
+                        <i class="fa-solid fa-bullhorn"></i>
+                    </div>
+                    <h3>Web Design</h3>
+                    <p class="pServices">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi, saepe hic!
+                        Quisquam delectus, nulla dolorem sint, soluta dolore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================================= Portfolio ==================================== -->
+    <section class="none port">
+        <div class="portContent">
+            <div class="headPort">
+                <h1><span class="pBroder">P</span><span class="Oborder">o</span>rtfolio</h1>
+
+                My Last Projects:
+            </div>
+            <div class="projects">
+                <div class="pro pro3">
+                    <img src="https://user-images.githubusercontent.com/97184327/164246844-40608a34-47eb-460f-9e33-01ac3df3f3af.png" alt="form">
+                </div>
+                <div class="pro pro1">
+                    <img src="https://user-images.githubusercontent.com/97184327/164241362-c033c435-b73e-4f23-9c71-907b02b2a146.png" alt="glossary">
+                </div>
+                <div class="pro pro2">
+                    <img src="https://user-images.githubusercontent.com/97184327/164331059-7683c6b2-0ad7-4e98-a2ce-9f80eb5e1e5b.png" alt="list">
+                </div>
+                <div class="pro pro4">
+                        <img src="https://user-images.githubusercontent.com/97184327/164329278-fd3db120-33fd-43cd-8c23-6f649843b1c7.png" alt="quiz" width="600">
+                </div>
+                <div class="pro pro5">
+                        <img src="https://user-images.githubusercontent.com/97184327/164332689-fe36b68f-b83c-40e2-a1d4-8b12768d1631.jpeg" alt="blog" width="900" height="800">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================= Contact ==================================== -->
+    <section class="none ctt">
+        <div class="containerCtt">
+
+            <div class="cttContent">
+                <div class="headCtt">
+                    <h1><span class="cBorder">C</span><span class="oBorderCtt">o</span>ntact Me</h1>
+                </div>
+
+                <div class="sonCtt">
+                    <h2 class="sonCttTitle">Have You Any Questions ?</h2>
+                        <h4>I'M AT YOUR SERVICE</h4>
+
+                    <div class="cttMore">
+                        <div class="cbox call">
+                            <div class="iconCbox">
+                                <i class="fa-solid fa-phone-flip"></i>
+                            </div>
+                            <h3 class="infoTittleCtt">Call Us On</h3>
+                            <h4 class="infoCtt">+13 70707070</h4>
+                        </div>
+
+                        <div class="cbox office">
+                            <div class="iconCbox">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <h3 class="infoTittleCtt">Office</h3>
+                            <h4 class="infoCtt">São Vicente, SP</h4>
+                        </div>
+
+                        <div class="cbox message">
+                            <div class="iconCbox">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <h3 class="infoTittleCtt">Email</h3>
+                            <h4 class="infoCtt">info@gmail.com</h4>
+                        </div>
+
+                        <div class="cbox websiteCtt">
+                            <div class="iconCbox">
+                                <i class="fa-solid fa-earth-africa"></i>
+                            </div>
+                            <h3 class="infoTittleCtt">Website</h3>
+                            <h4 class="infoCtt">mysite.mydomain</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cttBelow">
+                <h2 class="belowCttTitle">SEND ME AN EMAIL</h2>
+                <h4>I'M VERY RESPONSIVE TO MENSAGENS</h4>
+
+                <div class="formCtt">
+                    <form action="" method="get">
+                        <label for="fname">
+                            <input type="text" class="form inputFoms" name="nome" id="fname" placeholder="Name">
+                        </label>
+
+                        <label for="fmail">
+                            <input type="email" class="form2 inputFoms" name="email" id="fname" placeholder="Email">
+                        </label>
+                        <br>
+                        <label for="fsubject">
+                            <input type="text" class="form3 inputFoms" name="assunto" id="fsubject" placeholder="Subject">
+                        </label>
+                        <br>
+                        <label for="ftxt">
+                            <textarea name="mensagem" class="form4 inputFoms" id="ftxt" cols="30" rows="10" placeholder="Message"></textarea>
+                        </label>
+                        <br>
+                        <button type="submit" class="formBtt">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,946 @@
+/* importando fonte */
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* ======= DECLARANDO VARIÁVEIS======== */
+:root {
+    /* ===== THEME DARK ======== */
+    --background-color: #161516;
+    --background-color-menu: #212121;
+    --borderColor: #35353566;
+    --color: white;
+    --switcher: #ff4235;
+    --colorBelow: rgb(172, 172, 172);
+    --darkShadow: rgba(255, 255, 255, 0.2);
+}
+
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+    color: var(--color);
+}
+
+/* ============ THEME DARK==============*/ 
+body.dark {
+    --color: #302e4d;
+    --borderColor: #e8dfec;
+    --background-color:  #FdF9FF;
+    --background-color-menu: #f2f2fc;
+    --colorBelow: #504e70;
+    --darkShadow: rgba(0, 0, 0, .2);
+}
+
+body.dark .textThemeDark {
+    color: var(--color);
+}
+
+.dark .inputSidebar:checked .fa-solid {
+    color: var(--switcher);
+}
+
+/* ================ PARTE DA CUSTOMIZAÇÃO DO USUÁRIO ================ */
+
+.colorSwitcher {
+    position: fixed;
+    top: 30px; right: -215px;
+    width: 200px;
+    height: 80px;
+    padding: 10px;
+    background-color: var(--background-color-menu);
+    z-index: 1000;
+    border-radius: 10px;
+    border: solid var(--borderColor) 2px;
+    transition: right .5s linear;
+}
+
+
+.colorSwitcher.active {
+    right: 20px;
+    transition: right .5s linear;
+}
+
+.switcher {
+    color: var(--switcher);
+    transition: background .4s linear;
+}
+
+
+.colorSwitcher h3 {
+    color: var(--mainColor);
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 10px;
+    margin: 0;
+    text-align: center;
+}
+
+.colorSwitcher .switcherBtn {
+    position: absolute;
+    top: 0; left: -65px;
+    color: var(--mainColor);
+    background: var(--background-color-menu);
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    height: 38px;
+    width: 38px;
+    text-align: center;
+    border: solid var(--borderColor) 1px;
+    transition: background .4s linear;
+}
+
+.colorSwitcher .switcherBtn i {
+    margin-top: 10px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.colorSwitcher .themeButtonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.colorSwitcher .themeButtonsContainer .themeButtons {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox {
+    opacity: 0;
+    position: relative;
+}
+
+.fa-sun {
+    opacity: 0;
+}
+
+.label {
+    position: absolute;
+    bottom: 10px; left: -60px;
+    color: var(--mainColor);
+    background: var(--background-color-menu);
+    border-radius: 50%;
+    border: solid var(--borderColor) 1px;
+    cursor: pointer;
+    text-align: center;
+    height: 28px;
+    width: 28px;
+    transform: scale(1.3);
+    z-index: 1000;
+}
+.label i {
+    margin-top: 5px;
+}
+.label.active {
+    right: 190px;
+}
+
+
+.checkbox:checked+.label .fa-sun {
+    opacity: 1;
+    transform: translateY(-25px);
+}
+
+.checkbox:checked+.label .fa-moon {
+    opacity: 0;
+}
+
+.fa-moon, .fa-sun, .gear {
+    color: var(--color);
+    fill: var(--color);
+}
+
+
+/* Padronizando todos os conteúdos */
+body {
+    display: flow-root;
+    position: block;
+    background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color);
+    transition: background .2s linear;
+    z-index: 3;
+}
+
+/* ============== DENTRO DO SIDEBAR ================= */
+/* Criando um menu sidebar(barra-lateral) */
+div#sidebar {
+    background-color: var(--background-color-menu);
+    position: fixed;
+    float: left;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 18%;
+    border-right: solid var(--borderColor) 2px;
+    transition: background 0.2s linear;
+    z-index: 4;
+}
+
+/* estilizando o título */
+h1#title {
+    font-weight: lighter;
+}
+
+span#fontTitle {
+    font-family: 'Italianno', cursive;
+    font-weight: lighter;
+    font-size: 50px;
+}
+
+
+div.chooseBorder h1 {
+    margin: 50px;
+    width: 130px;
+    height: 60px;
+    letter-spacing: 5px;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+div.chooseBorder h1::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    bottom: 0%; left: -5px;
+    border-left: 5px solid var(--switcher); 
+    border-bottom: 5px solid var(--switcher); 
+    background-color: transparent;
+}
+
+div.chooseBorder h1::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    position: absolute;
+    top: 0%; right: -5px;
+    border-top: 5px solid var(--switcher); 
+    border-right: 5px solid var(--switcher); 
+    background-color: transparent;
+}
+
+/* ============ ESTILIZANDO LISTA =============== */
+menu.sidebar {
+    display: flex;
+    position: absolute;
+    right: 18px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+ul.sidebar li {
+    position: relative;
+    right: 20px;
+    bottom: -50px;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+}
+
+ul.sidebar li {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* ====== PARA TODOS OS SVGs ======= */
+svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* ========= EXCEÇÃO DENTRO E FORA DO SIDEBAR =============*/
+li, a {
+    color: #fff;
+    list-style: none;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ========= FORA DO SIDEBAR =============== */
+
+/* Criando uma área de conteúdo em geral */
+div.content {
+    background-color: var(--background-color);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: left;
+    height: 100%;
+    width: 100%;
+    transition: background 0.2s linear;
+}
+
+/* Customizando nome */
+span#name {
+    font-family: 'Italianno', cursive;
+    font-size: 50px;
+}
+
+span.chooseColor {
+    color: var(--switcher);
+    /*=====criar variavel======*/
+}
+
+/* Criando um main para melhor estilização */
+main.content {
+    position: relative;
+    bottom: 50px; left: calc(18%);
+    width: 50%;
+    margin: 50px;
+    margin-left: 20px;
+}
+
+/* idem ao item a cima, porém para os docs da pasta menu */
+section.contentMenu {
+    margin-left: 50px;
+}
+
+/* ============ Texto dinâmico ============ */
+div.textDinamic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container {
+    display: inline-flex;
+}
+
+.container .estatico {
+    position: relative;
+    right: 130px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.container .dinamico {
+    position: relative;
+    right: 130px; bottom: -20px;
+    line-height: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.dinamico li {
+    margin: 0;
+    position: relative;
+    right: 30px;
+    bottom: 30px;
+    color: var(--switcher);
+    font-size: 25px;
+    font-weight: 500;
+    animation: down 6s steps(3) infinite;
+}
+
+@keyframes down {
+    100% {
+        bottom: 279px;
+    }
+}
+
+.dinamico li .span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-left: 5px solid var(--color);
+    border-radius: 5px;
+    animation: typing 2s steps(20) infinite;
+    background-color: var(--background-color);
+    transition:  background .2s linear;
+}
+
+.dinamico li .span {
+    position: relative;
+}
+
+@keyframes typing {
+    90%{
+        left: 100%;
+        margin: 0 -35px 0 35px;   
+    }
+}
+.textDinamic {
+    box-sizing: border-box;
+    position: relative;
+    bottom: 20px;
+    display: flex;
+    height: 50px;
+    margin-bottom: 0;
+}
+.menuHome {
+    position: relative;
+    left: 2px;
+    width: 500px;
+}
+
+/* ======== BOTÃO ========== */
+button#moreMe {
+    border-radius: 50px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    background-color: var(--switcher); 
+    position: absolute;
+    top: 290px;
+}
+
+button#moreMe a {
+    font-weight: 500;
+}
+
+/* ========== Parte da foto ============ */
+.picture {
+    width: 350px;
+    height: 427px;
+    display: flex;
+    position: relative;
+    top: 0px; right: -100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.picture::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    top: 0%; left: 0%;
+    border-top: solid 5px var(--switcher);
+    border-left: solid 5px var(--switcher);
+}
+.picture::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    bottom: 0%; right: 0%;
+    border-bottom: solid 5px var(--switcher);
+    border-right: solid 5px var(--switcher);
+}
+
+
+/* ============== SECTION ABOUT ================ */
+.menuContent {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 180vh;
+    z-index: 3;
+}
+
+.menuInfoContent {
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 0 0 40px;
+    width: 80vw;
+    height: 30%;
+    position: relative;
+    bottom: 12px; left: 18%;
+}
+
+.menuTop {
+    display: block;
+    width: 80%;
+}
+
+.menuContent .menuInfoContent h1 {
+    display: block;
+    margin: 70px 0 50px 10px;
+}
+
+.menuContent .menuInfoContent .Amt {
+    border-bottom: double var(--switcher);
+    border-bottom-width: 15px;
+}
+.menuContent .menuInfoContent .Bmt {
+    border-bottom: solid var(--switcher) 5px;
+    border-bottom-right-radius: 2px;
+}
+
+.menuInfo {
+    margin-top: -30px;
+    display: flex;
+    width: 60%;
+}
+
+.menuInfoLeft, .menuInfoRight {
+    padding: 10px;
+    justify-content: left; text-align: left;
+    line-height: 30px;
+}
+
+.menuInfoLeft > p, .menuInfoRight > p {
+    border-bottom: solid var(--borderColor) 1px;
+    margin-bottom: 10px;
+}
+
+.infoColor {
+    color: var(--color);
+    font-weight: 600;
+}
+
+.menuInfoLeft {
+    width: 50%;
+}
+
+.menuInfoRight {
+    width: 50%;
+}
+
+/* ==================== BOTÃO =================== */
+
+button.switcher {
+    border-radius: 50px;
+    margin-right: 10px;
+    border: none;
+    width: 150px;
+    height: 40px;
+    background-color: var(--switcher); 
+}
+
+/* ==================== menu range =================== */
+
+.menuAppropriation {
+    display: flex;
+    position: absolute;
+    top: 350px; right: 20px;
+    width: 30%;
+    height: 30%;
+}
+
+.menuRange{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 60px;
+}
+
+.menuAppropriation .menuRange .rangeOut {
+    display: block;
+    position: absolute;
+    height: 8px;
+    width: 90%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menuAppropriation .menuRange .range {
+    display: block;
+    position: absolute;
+    height: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.menuAppropriation .menuRange .menuLabel {
+    display: flex;
+    color: var(--color);
+    width: 90%;
+    cursor: pointer;
+}
+.menuAppropriation .menuRange:not(span) {
+    justify-content: space-between;
+}
+
+.titleLabel {
+    display: flex;
+    color: var(--color);
+    width: 90%;
+    cursor: pointer;
+}
+
+.below {
+    display: flex;
+    width: 78%;
+    height: 80%;
+    position: relative;
+    left: 20%; top: 350px;
+}
+
+.below > .barEducation, .below > .barExperience {
+    display: block;
+    width: 46%;
+    height: auto;
+    padding: 10px;
+    position: absolute;
+}
+
+.below > .barEducation::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 82%;
+    position: absolute;
+    top: 120px; left: 25px;
+    background-color: var(--switcher);
+    transition: background .2s linear;
+}
+
+.below > .barExperience::before {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 82%;
+    position: absolute;
+    top: 120px; left: 25px;
+    background-color: var(--switcher);
+    transition: background .2s linear;
+}
+
+
+.below > .barExperience {
+    right: 0;
+}
+
+.below > .barEducation .inline, .below > .barExperience .inline {
+    display: flex;
+    background-color: var(--background-color-menu);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    padding: 10px 10px 10px 40px;
+}
+
+.below > .barEducation .inline .data, .below > .barExperience .inline .data {
+    color: var(--colorBelow);
+    font-size: small;
+}
+
+.below > .barEducation .inline .fa-calendar, .below > .barExperience .inline .fa-calendar {
+    color: var(--colorBelow);
+    font-size: small;
+}
+
+.lball::before, .lball2::before, .lball3::before {
+    content: "";
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    top: 20px; right: 32px;
+    background-color: var(--switcher);
+    transition: background .2s linear;
+}
+
+.rball::before, .rball2::before, .rball3::before {
+    content: "";
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: block;
+    position: relative;
+    top: 20px; right: 32px;
+    background-color: var(--switcher);
+    transition: background .2s linear;
+}
+
+/* ================================== SERVICES =============================== */
+
+.menuContetServices {
+    display: block;
+    position: absolute;
+    top: 0; left: 280px;
+    height: 115%;
+    width: 78%;
+}
+
+.servicesTitle {
+    margin: 50px 50px 50px 0;
+    font-size: large;
+}
+.servicesTitle > h1 .Sborder {
+    border-bottom: double var(--switcher) 10px;
+}
+.servicesTitle > h1 .Eborder {
+    border-bottom: solid var(--switcher) 3px;
+}
+
+.menuServices {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+}
+
+.menuServices .sbox {
+    display: block;
+    width: 260px;
+    height: 260px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid var(--borderColor) 1px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-color-menu);
+}
+
+.menuServices .sbox .iconS {
+    color: var(--switcher);
+    transition: background .0s linear;
+    font-size: 50px;
+    transition: font-size .2s linear;
+}
+
+.menuServices .sbox:hover .iconS {
+    border-radius: 50%;
+    margin-left: 95px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--switcher);
+    transition: background .0s linear;
+    color: var(--background-color);
+    font-size: 45px;
+    transition: font-size .2s linear;
+}
+.menuServices .sbox:hover {
+    box-shadow: 0 0 20px var(--darkShadow);
+}
+
+/* ====================================== PORTFOLIO ========================================= */
+
+.portContent {
+    display: block;
+    width: 990px;
+    height: 320vh;
+    position: relative;
+    top: 0; left: 21%;
+}
+
+.headPort {
+    margin: 50px 50px 50px 0;
+    font-size: large;
+}
+.headPort > h1 .pBroder {
+    border-bottom: double var(--switcher) 10px;
+}
+.headPort > h1 .Oborder {
+    border-bottom: solid var(--switcher) 3px;
+}
+
+.portContent .projects {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+.portContent .pro {
+    margin: 0px 10px 0 0;
+    border: solid 5px var(--background-color-menu);
+}
+
+.portContent .pro:hover {
+    box-shadow: 0 0 50px var(--darkShadow);
+}
+
+.pro1 {
+    width: auto;
+    height: 500px;
+}
+
+.pro2 {
+    width: auto;
+    height: 240px;
+}
+
+.pro3 {
+    width: auto;
+    height: 580px;
+}
+
+.pro4 {
+    width: auto;
+    height: auto;
+}
+
+.pro4 {
+    width: 600px;
+    height: 380px;
+}
+
+.pro5 {
+    width: auto;
+    height: 800px;
+}
+
+
+/* ====================================== CONTACT ME ========================================= */
+
+.containerCtt {
+    display: block;
+    width: 1050px;
+    height: 150vh;
+    position: relative;
+    top: 0; left: 20%;
+}
+
+.headCtt {
+    margin: 50px 50px 50px 0;
+    font-size: large;
+}
+.headCtt > h1 .cBorder {
+    border-bottom: double var(--switcher) 10px;
+}
+.headCtt > h1 .oBorderCtt {
+    border-bottom: solid var(--switcher) 3px;
+}
+.sonCtt, .cttBelow {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.sonCtt .sonCttTitle, .belowCttTitle {
+    color: var(--switcher);
+}
+
+.sonCtt .cttMore {
+    display: flex;
+}
+
+.cbox {
+    width: 500px;
+    height: 200px;
+    margin: 10px;
+    background-color: var(--background-color-menu);
+    border: solid var(--borderColor) 1px;
+}
+.cbox:hover {
+    box-shadow: 0 0 30px var(--darkShadow);
+}
+
+.cbox .iconCbox {
+    color: var(--switcher);
+    font-size: x-large;
+    margin-top: 30px;
+}
+.infoCtt {
+    font-size: 14px;
+    font-weight: 100;
+    color: var(--colorBelow);
+}
+
+.cttBelow {
+    display: block;
+    width: 100%;
+    height: 52%;
+}
+
+
+.cttBelow .formCtt {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
+    height: 80%;
+}
+form {
+    width: 100%;
+    height: 100%;
+}
+
+.cttBelow .formCtt .inputFoms {
+    background-color: var(--background-color-menu);
+    border-radius: 30px;
+    padding-left: 20px;
+    border: solid var(--borderColor) 1px;
+    margin: 10px 0 10px 0;
+}
+
+.form, .form2 {
+    width: 47%;
+    height: 35px;
+}
+
+.form3, .form4 {
+    width: 96%;
+    height: 35px;
+}
+.form4 {
+    height: 150px;
+    padding: 10px;
+}
+
+.formCtt .formBtt {
+    background-color: var(--switcher);
+    border: none;
+    border-radius: 40px;
+    width: 150px;
+    height: 40px;
+    color: var(--color);
+    position: absolute;
+    bottom: 50px; left: 0px;
+}
+
+.home {
+    position: relative;
+    top: 280px; right: 0;
+    animation: slide 1s forwards;
+}
+
+
+.none {
+    display: none;
+    animation: slide 1s forwards;
+}
+@keyframes slide {
+    0% {
+        transform: translateX(900px);
+    }
+    70% {
+        transform: translateX(-25px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid var(--borderColor);
+    padding-bottom: 10px;
+    color: var(--color);
+    font-size: medium;
+    text-transform: capitalize;
+    transition: .3s linear color;
+    width: 120px;
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+}
